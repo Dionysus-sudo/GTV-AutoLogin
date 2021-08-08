@@ -23,7 +23,7 @@ automate = Login(driver)
 
 ''''
 Initiate test cases with pytest using below command in terminal to genetate html-report:
-     pytest mod_appium.py -s --html test_results.html --capture=tee-sys
+     pytest tests.py -s --html test_results.html --capture=tee-sys
 
 '''
 
