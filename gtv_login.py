@@ -1,7 +1,7 @@
 from appium import webdriver
 from selenium.common.exceptions import NoSuchElementException
 import pytest
-import logging, time
+import logging
 
 '''
 configuring the logger for logging warnings which will be displayed in the html-report
