@@ -20,7 +20,14 @@ This project contains a file with all the test cases and another file containing
 
 Targeted app: https://play.google.com/store/apps/details?id=tv.game
 
-requirements.txt https://github.com/Dionysus-sudo/GTV-AutoLogin/edit/main/README.md
+requirements.txt https://github.com/Dionysus-sudo/GTV-AutoLogin/blob/main/requirements.txt
+
+Install all with: 
+
+```bash
+  pip install -r requirements.txt
+```
+or 
 
 Install Appium using the below command
 
@@ -42,7 +49,7 @@ Install pytest(w/html plugin) using the below command
 To run tests, run the following command
 
 ```bash
-  pytest mod_appium.py -s --html test_results.html --capture=tee-sys
+  pytest tests.py -s --html test_results.html --capture=tee-sys
 ```
 The above command can be run directly from the terminal and targets all the test cases.
 --html and -s argument is being given to generate the html results to file 'test_results.html' and stdout the logs respectively.
