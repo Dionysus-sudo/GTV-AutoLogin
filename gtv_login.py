@@ -21,8 +21,7 @@ Login class contains methods that executes the following:
     1. Launch the app and checks the login page by checking the login options available.
     2. Find the twitter icon and clicks on the same.
     3. Targets the credential fields, populate the same and Authorize with Twitter.
-    4. Login to the next page where twitter account info is asked again.
-    5. Checks whether we've reached the home page by targeting the page title icon.
+    4. Checks whether we've reached the home page by targeting the page title icon.
 '''
 
 class Login(object):
@@ -80,37 +79,6 @@ class Login(object):
             authorize_twitter.click()
             print('Success: Twitter auth deployed!')
         except NoSuchElementException:
-            return False
-        return True
-
-
-    def login_with_twitter(self, email, password):
-        self.email = email
-        self.password = password
-        try:
-            username_or_email_field = self.driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View/android.view.View[2]/android.view.View/android.widget.EditText')
-            if username_or_email_field is None:
-                return False
-            logger.warning('Username field not found!')
-            username_or_email_field.send_keys(email)
-            print('Success: Username field found! Email entered!')
-
-            password_field = self.driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View[2]/android.view.View[1]/android.view.View/android.view.View[2]/android.view.View/android.widget.EditText')
-            if password_field is None:
-                return False
-            logger.warning('Password field not found!')
-            password_field.send_keys(password)
-            print('Success: Password field found! Password entered.')
-
-            login_button = self.driver.find_element_by_xpath('/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View[3]/android.widget.Button')
-            if login_button is None:
-                logger.warning('Log in button not found!')
-                return False
-            login_button.click()
-            print('Success: Log in button clicked.')
-
-        except NoSuchElementException:
-            logger.warning(f'Element not found while running {self.login_with_twitter.__name__}')
             return False
         return True
 
