@@ -37,11 +37,8 @@ def test_twitter_login_presence():
 
 #Test3
 def test_twitter_auth():
-    assert automate.authorize_twitter('tes1.auto1@gmail.com', 'game@twitter') == True
+    assert automate.authorize_twitter('YOUR_EMAIL', 'YOUR_PASSWORD') == True
 
-#Test3
-def test_twitter_login():
-    assert automate.login_with_twitter('tes1.auto1@gmail.com', 'game@twitter') == True
-
+#Test4
 def test_home_page_visibility():
-    assert automate.home_page_visibility == True
+    assert automate.home_page_visibility() == True
