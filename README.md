@@ -52,7 +52,7 @@ To run tests, run the following command
   pytest tests.py -s --html test_results.html --capture=tee-sys
 ```
 The above command can be run directly from the terminal and targets all the test cases.
---html and -s argument is being given to generate the html results to file 'test_results.html' and stdout the logs respectively.
+--html and -s argument is being given to generate the html results to file 'test_results.html' and stdout the logs(including the pass cases INFO) respectively.
 
 
 
